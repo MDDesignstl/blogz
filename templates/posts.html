@@ -1,0 +1,18 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+    {% if posts|length == 0 %}
+    <h1>No blog entries yet</h1>
+    {% else %}
+
+        {% for post in posts %}
+            <div class = "post">
+                <h3><a href="/blog?id={{ post.id }}">{{ post.title }}</a></h3> <h5>{{ post.pub_date.strftime('%m-%d-%Y') }}</h5>
+                <p>{{ post.body|striptags|truncate(100) }}</p>
+            </div>
+        {% endfor %}
+
+    {% endif %}
+
+{% endblock %}

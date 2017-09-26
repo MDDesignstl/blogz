@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Mike's Blog</title>
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <style>
+body {
+  padding-top: 140px;
+  padding-bottom: 40px;
+}
+
+textarea {
+    height: 350px;
+}
+
+btn {
+    width: 25px;
+}
+
+.error, .required, .delete {
+  color: red;
+}
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+                <a class="navbar-brand" href="/blog">Mike's Blog</a>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/newpost">Add New Post</a>
+                    </li>
+                </ul>
+            </nav>
+      {% block content %}
+      {% endblock %}
+    </div> <!-- /container -->
+  </body>
+</html>
