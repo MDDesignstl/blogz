@@ -31,22 +31,42 @@ btn {
 .error, .required, .delete {
   color: red;
 }
+
+.user-account {
+    float: right;
+}
+
+.user {
+    margin-bottom: 10px;
+}
     </style>
   </head>
 
   <body>
     <div class="container">
             <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-                <a class="navbar-brand" href="/blog">Mike's Blog</a>
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/blog">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/newpost">Add New Post</a>
-                    </li>
-                </ul>
+                <div class="container">
+                    <a class="navbar-brand" href="/">Mike's Blog</a>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/newpost">Add New Post</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav user-account">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout">Logout</a>
+                        </li> 
+                    <ul>
+                </div>
             </nav>
+    </div>
+    <div class="container">
       {% block content %}
       {% endblock %}
     </div> <!-- /container -->
