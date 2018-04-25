@@ -26,7 +26,7 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100), unique=True)
     password = db.Column(db.String(100))
-    blogs = db.relationship('Blog', backref='author_id')
+    blogs = db.relationship('Blog', backref='user', lazy='joined')
 
 def redirect_url():
     return request.args.get('next') or \
@@ -176,7 +176,7 @@ def addnew():
         new_post = Blog(title = title, body = content, pub_date = datetime.datetime.now(), author = user.id)
         db.session.add(new_post)
         db.session.commit()
-        
+
         return redirect('/blog?id=' + str(new_post.id))
     else:
 
